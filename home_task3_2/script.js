@@ -11,15 +11,10 @@ let bookClub = [
     let booksInClub = arr.reduce(function(last, arr) {
      return (arr[param].concat(last));
     }, "Charlie and the Chocolate Factory");
-    let arr1 = booksInClub.sort();
-    for (let i=1; i<arr1.length; i++) {
-        if(arr1[i]===arr1[i-1]){
-            arr1.splice(i, 1);
-            i--;
-        }
-      }
-      return (arr1);
+    let newarray= booksInClub.filter((item, index)=>  booksInClub.indexOf(item)===index);    
+      return (newarray);
     } 
-
+  
     console.log( everyboduLovesBooks(bookClub, "books")); 
+  
     
